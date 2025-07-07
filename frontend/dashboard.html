@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Admin Dashboard - Jimbro</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="dashboard-container">
+    <header>
+      <h1>🏋️ Admin Dashboard</h1>
+      <button id="logoutBtn">Logout</button>
+    </header>
+
+    <div id="notifications" class="notification-box hidden"></div>
+
+    <section class="add-member">
+      <h2>Add New Member</h2>
+      <form id="memberForm">
+        <input type="text" id="name" placeholder="Member Name" required>
+        <input type="tel" id="phone" placeholder="Phone Number" required pattern="[0-9]{10}">
+        <input type="date" id="startDate" required>
+        <input type="date" id="endDate" required>
+        <button type="submit">Add Member</button>
+      </form>
+
+    </section>
+
+    <section class="member-list">
+      <h2>Current Members</h2>
+      <table id="memberTable">
+        <thead>
+          <tr>
+            <th>Name</th>
+            <th>Start</th>
+            <th>End</th>
+            <th>Actions</th>
+          </tr>
+        </thead>
+        <tbody>
+          <!-- Members will appear here -->
+        </tbody>
+      </table>
+    </section>
+  </div>
+
+  <script src="dashboard.js"></script>
+  <style>.dashboard-container {
+  max-width: 1000px;
+  margin: 50px auto;
+  padding: 20px;
+  color: white;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+header h1 {
+  font-size: 36px;
+  color: #facc15;
+}
+
+header button {
+  background-color: #f87171;
+  color: white;
+  padding: 10px 16px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.add-member h2, .member-list h2 {
+  color: #facc15;
+  margin-top: 30px;
+}
+
+form input {
+  padding: 10px;
+  margin: 8px;
+  width: 200px;
+  border-radius: 6px;
+  border: none;
+}
+
+form button {
+  padding: 10px 20px;
+  background-color: #22c55e;
+  border: none;
+  color: white;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 15px;
+}
+
+table th, table td {
+  padding: 12px;
+  border-bottom: 1px solid #444;
+  text-align: left;
+}
+
+.notification-box {
+  padding: 15px;
+  background-color: #facc15;
+  color: #111;
+  margin-bottom: 20px;
+  border-radius: 8px;
+}
+
+.hidden {
+  display: none;
+}
+</style>
+</body>
+</html>
