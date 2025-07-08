@@ -34,3 +34,13 @@
 - MongoDB (local or MongoDB Atlas)
 
 ---
+### how to start ?
+-Start the server:
+-node server.js
+
+-3. Frontend Setup
+-Open frontend/index.html or dashboard.html in your browser.
+
+-🛡️ Admin Credentials(test only)
+Username: admin
+Password: admin@123
